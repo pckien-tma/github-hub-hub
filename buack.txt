@@ -1,0 +1,17 @@
+$.ajax({
+				url: sa.contextPath + '/contents/level_question',
+				type: "GET",
+				async : true,
+				success:function(data){
+					$("#level_question").html(data);
+				}
+				
+			});
+			
+			
+			
+			
+			
+        .when("/contentBuilder/level1/:content_id",{templateUrl:"contents/level_1",controller:"ContentBuilderCtrl"})
+        .when("/contentBuilder/level2/:content_id/:level",{templateUrl:"contents/level_n",controller:"ContentBuilderLevel2Ctrl"})
+        .when("/contentBuilder/questions/:content_id",{templateUrl:"contents/question",controller:"ContentQuestionCtrl"})
